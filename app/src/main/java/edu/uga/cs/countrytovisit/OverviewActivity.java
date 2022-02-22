@@ -38,20 +38,15 @@ public class OverviewActivity extends AppCompatActivity {
     public void showSelectedCountry(String country) {
         try {
             if (country.equals("Colombia")) {
-                readText = getResources().openRawResource(R.raw.colombia);
-                imageView.setImageResource(R.drawable.col_flag);
+                setColombia();
             } else if (country.equals("Venezuela")) {
-                readText = getResources().openRawResource(R.raw.venezuela);
-                imageView.setImageResource(R.drawable.ven_flag);
+                setVenezuela();
             } else if (country.equals("Mexico")) {
-                readText = getResources().openRawResource(R.raw.mexico);
-                imageView.setImageResource(R.drawable.mex_flag);
-            } else if (country.equals("France")) {
-                readText = getResources().openRawResource(R.raw.france);
-                imageView.setImageResource(R.drawable.france_flag);
+                setMexico();
             } else if (country.equals("Spain")) {
-                readText = getResources().openRawResource(R.raw.spain);
-                imageView.setImageResource(R.drawable.spain_flag);
+                setSpain();
+            } else if (country.equals("France")) {
+                setFrance();
             }
             byte[] b = new byte[readText.available()];
             readText.read(b);
@@ -59,6 +54,31 @@ public class OverviewActivity extends AppCompatActivity {
         } catch (Exception e) {
             overviewText.setText( "Error: can't show info text." );
         }
+    }
+
+    public void setColombia() {
+        readText = getResources().openRawResource(R.raw.colombia);
+        imageView.setImageResource(R.drawable.col_flag);
+    }
+
+    public void setVenezuela() {
+        readText = getResources().openRawResource(R.raw.venezuela);
+        imageView.setImageResource(R.drawable.ven_flag);
+    }
+
+    public void setMexico() {
+        readText = getResources().openRawResource(R.raw.mexico);
+        imageView.setImageResource(R.drawable.mex_flag);
+    }
+
+    public void setSpain() {
+        readText = getResources().openRawResource(R.raw.spain);
+        imageView.setImageResource(R.drawable.spain_flag);
+    }
+
+    public void setFrance() {
+        readText = getResources().openRawResource(R.raw.france);
+        imageView.setImageResource(R.drawable.france_flag);
     }
 
     @Override

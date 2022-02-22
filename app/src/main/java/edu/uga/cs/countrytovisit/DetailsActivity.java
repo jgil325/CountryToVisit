@@ -34,9 +34,27 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void showSelectedCountry(String country) {
         try {
-            readText = getResources().openRawResource(R.raw.colombia_details);
-            imageView1.setImageResource(R.drawable.col_uber);
-            imageView2.setImageResource(R.drawable.col_med);
+            if (country.equals("Colombia")) {
+                readText = getResources().openRawResource(R.raw.colombia_details);
+                imageView1.setImageResource(R.drawable.col_uber);
+                imageView2.setImageResource(R.drawable.col_med);
+            } else if (country.equals("Colombia")) {
+                readText = getResources().openRawResource(R.raw.colombia_details);
+                imageView1.setImageResource(R.drawable.col_uber);
+                imageView2.setImageResource(R.drawable.col_med);
+            } else if (country.equals("Colombia")) {
+                readText = getResources().openRawResource(R.raw.colombia_details);
+                imageView1.setImageResource(R.drawable.col_uber);
+                imageView2.setImageResource(R.drawable.col_med);
+            } else if (country.equals("Colombia")) {
+                readText = getResources().openRawResource(R.raw.colombia_details);
+                imageView1.setImageResource(R.drawable.col_uber);
+                imageView2.setImageResource(R.drawable.col_med);
+            } else if (country.equals("Colombia")) {
+                readText = getResources().openRawResource(R.raw.colombia_details);
+                imageView1.setImageResource(R.drawable.col_uber);
+                imageView2.setImageResource(R.drawable.col_med);
+            }
             byte[] b = new byte[readText.available()];
             readText.read(b);
             detailsText.setText(new String(b));
@@ -44,8 +62,6 @@ public class DetailsActivity extends AppCompatActivity {
             detailsText.setText( "Error: can't show info text." );
         }
     }
-
-
 
 
 
