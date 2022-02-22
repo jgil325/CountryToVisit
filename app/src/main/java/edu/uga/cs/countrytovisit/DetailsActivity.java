@@ -35,25 +35,15 @@ public class DetailsActivity extends AppCompatActivity {
     public void showSelectedCountry(String country) {
         try {
             if (country.equals("Colombia")) {
-                readText = getResources().openRawResource(R.raw.colombia_details);
-                imageView1.setImageResource(R.drawable.col_uber);
-                imageView2.setImageResource(R.drawable.col_med);
-            } else if (country.equals("Colombia")) {
-                readText = getResources().openRawResource(R.raw.colombia_details);
-                imageView1.setImageResource(R.drawable.col_uber);
-                imageView2.setImageResource(R.drawable.col_med);
-            } else if (country.equals("Colombia")) {
-                readText = getResources().openRawResource(R.raw.colombia_details);
-                imageView1.setImageResource(R.drawable.col_uber);
-                imageView2.setImageResource(R.drawable.col_med);
-            } else if (country.equals("Colombia")) {
-                readText = getResources().openRawResource(R.raw.colombia_details);
-                imageView1.setImageResource(R.drawable.col_uber);
-                imageView2.setImageResource(R.drawable.col_med);
-            } else if (country.equals("Colombia")) {
-                readText = getResources().openRawResource(R.raw.colombia_details);
-                imageView1.setImageResource(R.drawable.col_uber);
-                imageView2.setImageResource(R.drawable.col_med);
+                setColombia();
+            } else if (country.equals("Venezuela")) {
+                setVenezuela();
+            } else if (country.equals("Mexico")) {
+                setMexico();
+            } else if (country.equals("Spain")) {
+                setSpain();
+            } else if (country.equals("France")) {
+                setFrance();
             }
             byte[] b = new byte[readText.available()];
             readText.read(b);
@@ -61,6 +51,36 @@ public class DetailsActivity extends AppCompatActivity {
         } catch (Exception e) {
             detailsText.setText( "Error: can't show info text." );
         }
+    }
+
+    public void setColombia() {
+        readText = getResources().openRawResource(R.raw.colombia_details);
+        imageView1.setImageResource(R.drawable.col_uber);
+        imageView2.setImageResource(R.drawable.col_med);
+    }
+
+    public void setVenezuela() {
+        readText = getResources().openRawResource(R.raw.venezuela_details);
+        imageView1.setImageResource(R.drawable.ven_1);
+        imageView2.setImageResource(R.drawable.ven_2);
+    }
+
+    public void setMexico() {
+        readText = getResources().openRawResource(R.raw.mexico_details);
+        imageView1.setImageResource(R.drawable.mex_1);
+        imageView2.setImageResource(R.drawable.mex_2);
+    }
+
+    public void setSpain() {
+        readText = getResources().openRawResource(R.raw.spain_details);
+        imageView1.setImageResource(R.drawable.spain_1);
+        imageView2.setImageResource(R.drawable.spain_2);
+    }
+
+    public void setFrance() {
+        readText = getResources().openRawResource(R.raw.france_details);
+        imageView1.setImageResource(R.drawable.france_1);
+        imageView2.setImageResource(R.drawable.france_2);
     }
 
 
