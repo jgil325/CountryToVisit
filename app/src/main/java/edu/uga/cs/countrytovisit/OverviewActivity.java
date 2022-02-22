@@ -24,17 +24,21 @@ public class OverviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.country_overview);
 
+        //Set variables to the buttons
         overviewText = findViewById(R.id.overview_text);
         imageView = findViewById(R.id.overview_image);
 
-
+        //Get the back arrow created
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //Get the current country from mainActivity intent
         currentCountry = getIntent().getStringExtra("CurrentCountry");
+        //Show the correct country based on the one selected
         showSelectedCountry(currentCountry);
 
     }
 
+    //Reads correct text files and sets pictures based on the country
     public void showSelectedCountry(String country) {
         try {
             if (country.equals("Colombia")) {
@@ -56,31 +60,37 @@ public class OverviewActivity extends AppCompatActivity {
         }
     }
 
+    //---------------------------Set images and text file to be read depending on country
     public void setColombia() {
         readText = getResources().openRawResource(R.raw.colombia);
         imageView.setImageResource(R.drawable.col_flag);
     }
 
+    //---------------------------Set images and text file to be read depending on country
     public void setVenezuela() {
         readText = getResources().openRawResource(R.raw.venezuela);
         imageView.setImageResource(R.drawable.ven_flag);
     }
 
+    //---------------------------Set images and text file to be read depending on country
     public void setMexico() {
         readText = getResources().openRawResource(R.raw.mexico);
         imageView.setImageResource(R.drawable.mex_flag);
     }
 
+    //---------------------------Set images and text file to be read depending on country
     public void setSpain() {
         readText = getResources().openRawResource(R.raw.spain);
         imageView.setImageResource(R.drawable.spain_flag);
     }
 
+    //---------------------------Set images and text file to be read depending on country
     public void setFrance() {
         readText = getResources().openRawResource(R.raw.france);
         imageView.setImageResource(R.drawable.france_flag);
     }
 
+    //Used for the back button
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -92,6 +102,7 @@ public class OverviewActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Used for the back button
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
     }

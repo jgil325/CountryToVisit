@@ -23,9 +23,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Set variables to the two buttons
         overviewB = findViewById(R.id.overview_button);
         detailsB = findViewById(R.id.details_button);
 
+        //Create the spinner
         spinner = findViewById(R.id.country_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         adapter = ArrayAdapter.createFromResource(this,
@@ -37,12 +39,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setOnItemSelectedListener(MainActivity.this);
 //        System.out.println("I am ready to be clicked");
 
-        System.out.println(currentCountry);
+//        System.out.println(currentCountry);
 
+        //Set the button functions
         overviewB.setOnClickListener(new ButtonClickOverview());
         detailsB.setOnClickListener(new ButtonClickDetails());
     }
 
+    //Button intent for OVERVIEW
     private class ButtonClickOverview implements
             View.OnClickListener
     {
@@ -56,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
+    //Button intent for DETAILS
     private class ButtonClickDetails implements
             View.OnClickListener
     {
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
+    //Methods needed to use the Spinner
     public void onItemSelected(AdapterView<?> parent, View view,
                                int pos, long id) {
         currentCountry = parent.getItemAtPosition(pos).toString();
