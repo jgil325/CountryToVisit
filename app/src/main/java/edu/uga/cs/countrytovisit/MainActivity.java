@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         public void onClick( View view ) {
 //            System.out.println("I WAS CLICKED");
             Intent intent = new
-                    Intent( view.getContext(), OverviewActivity.class );
+                    Intent( view.getContext(), NewHomeActivity.class );
             intent.putExtra("CurrentCountry",currentCountry);
             startActivity( intent );
         }
