@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable-v24/rect_border.xml" value="0.2095" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/country_details.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/country_list_fragment.xml" value="0.17552083333333332" />
         <entry key="app/src/main/res/layout/country_overview.xml" value="0.2552083333333333" />
         <entry key="app/src/main/res/layout/new_home.xml" value="0.18854166666666666" />
       </map>
